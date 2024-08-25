@@ -1,23 +1,14 @@
-# Lead-Scoring-Case-Study
-Logistic regression model for lead classification
+# Project Overview
 
-An education company named X Education sells online courses to industry professionals. On any given day, many professionals who are interested in the courses land on their website and browse for courses. 
+X Education, an online education company, offers courses to industry professionals. Each day, numerous professionals visit their website, exploring various course offerings. The company promotes its courses across multiple platforms, including websites and search engines like Google. Visitors to the site may browse courses, fill out forms, or watch videos. When someone submits a form with their email address or phone number, they are classified as a lead. Additionally, leads are generated through referrals from previous customers. Once leads are captured, the sales team reaches out via phone calls, emails, etc. While some of these leads eventually convert into paying customers, the majority do not. Currently, the lead conversion rate at X Education is approximately 30%.
 
- 
+Despite generating a significant number of leads, X Education struggles with a low conversion rate. For example, out of 100 leads acquired in a day, only about 30 are converted. To improve efficiency, the company aims to identify high-potential leads, also known as "Hot Leads." By focusing their efforts on these promising leads, the sales team can potentially increase the conversion rate. The sales funnel starts with many leads at the top, but only a few become paying customers. Therefore, nurturing potential leads through education and consistent communication is crucial for improving the conversion rate.
 
-The company markets its courses on several websites and search engines like Google. Once these people land on the website, they might browse the courses or fill up a form for the course or watch some videos. When these people fill up a form providing their email address or phone number, they are classified to be a lead. Moreover, the company also gets leads through past referrals. Once these leads are acquired, employees from the sales team start making calls, writing emails, etc. Through this process, some of the leads get converted while most do not. The typical lead conversion rate at X education is around 30%. 
+X Education has tasked you with identifying the most promising leads—those most likely to convert into paying customers. Your goal is to build a model that assigns a lead score to each lead, indicating their likelihood of conversion. A higher lead score suggests a higher chance of conversion, while a lower score suggests a lower chance. The CEO has set a target conversion rate of around 80%.
 
- 
+# Data
 
-Now, although X Education gets a lot of leads, its lead conversion rate is very poor. For example, if, say, they acquire 100 leads in a day, only about 30 of them are converted. To make this process more efficient, the company wishes to identify the most potential leads, also known as ‘Hot Leads’. If they successfully identify this set of leads, the lead conversion rate should go up as the sales team will now be focusing more on communicating with the potential leads rather than making calls to everyone. There are a lot of leads generated in the initial stage (top) but only a few of them come out as paying customers from the bottom. In the middle stage, you need to nurture the potential leads well (i.e. educating the leads about the product, constantly communicating etc.) in order to get a higher lead conversion.
+The provided historical leads dataset contains around 9,000 data points. The dataset includes various attributes such as Lead Source, Total Time Spent on the Website, Total Visits, Last Activity, etc., which may influence whether a lead converts. The target variable in this dataset is 'Converted,' where 1 indicates a lead was converted, and 0 indicates it was not. You can find more details about the dataset in the data dictionary provided in the zip folder. Additionally, some categorical variables have a 'Select' level, which should be treated as a null value.
 
- 
-
-X Education has appointed you to help them select the most promising leads, i.e. the leads that are most likely to convert into paying customers. The company requires you to build a model wherein you need to assign a lead score to each of the leads such that the customers with a higher lead score have a higher conversion chance and the customers with a lower lead score have a lower conversion chance. The CEO, in particular, has given a ballpark of the target lead conversion rate to be around 80%.
-
- 
-
-Data
-You have been provided with a leads dataset from the past with around 9000 data points. This dataset consists of various attributes such as Lead Source, Total Time Spent on Website, Total Visits, Last Activity, etc. which may or may not be useful in ultimately deciding whether a lead will be converted or not. The target variable, in this case, is the column ‘Converted’ which tells whether a past lead was converted or not wherein 1 means it was converted and 0 means it wasn’t converted. You can learn more about the dataset from the data dictionary provided in the zip folder at the end of the page. Another thing that you also need to check out are the levels present in the categorical variables. Many of the categorical variables have a level called 'Select' which needs to be handled because it is as good as a null value.
-
-The goal of this study is to build a logistic regression model to assign a lead score between 0 and 100 to each of the leads which can be used by the company to target potential leads. A higher score would mean that the lead is hot, i.e. is most likely to convert whereas a lower score would mean that the lead is cold and will mostly not get converted.
+# Objective 
+Build a logistic regression model that assigns a lead score between 0 and 100 to each lead. This score will help the company focus on potential leads, with higher (lower) scores indicating a higher (lower) likelihood of conversion.
